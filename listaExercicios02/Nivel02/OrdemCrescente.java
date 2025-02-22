@@ -3,24 +3,23 @@ import java.util.Arrays;
 
 public class OrdemCrescente{
     public static void main(String [] args){
-        int numeros = 3;
-        int[] Ordem = new int[numeros];
-        
         Scanner entrada = new Scanner(System.in);
-
-        System.out.println("Informe o primeiro número: ");
-        Ordem[0] = entrada.nextInt();
-        System.out.println("Informe o segundo numero: ");
-        Ordem[1] = entrada.nextInt();
-        System.out.println("Informe o terceiro numero: ");
-        Ordem[2] = entrada.nextInt();
-
-        System.out.println("Os numeros informados foram: Numero um: " + Ordem[0] + " \nnumero dois: " + Ordem[1] + " \nnumero três: " + Ordem[2]);
-        array [] ordenado = Arrays.sort(Ordem);
-        System.out.println(ordenado);
-
+        int Quantidade = 3;
+        int[] Numeros = new int[Quantidade];
         
-        ;
+
+        System.out.println("Ordenador de numeros\n\n");
+
+        for (int x = 0; x < Quantidade; x++){
+            System.out.println("Digite o " + (x+1) + " numero");
+            Numeros[x] = entrada.nextInt();
+        }
+
+        Arrays.sort(Numeros);
+        System.out.println("\n\nOs numeros em ordem crescente são: ");
+        for (int Numero : Numeros) {
+            System.out.println(Numero);
+        }
     }
 }
 
